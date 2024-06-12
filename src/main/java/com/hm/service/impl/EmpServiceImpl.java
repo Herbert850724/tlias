@@ -38,6 +38,7 @@ public class EmpServiceImpl implements EmpService {
         PageBean pageBean = new PageBean(p.getTotal(),p.getResult());
 
         return pageBean;
+
     }
 
 }
