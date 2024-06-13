@@ -3,6 +3,9 @@ package com.hm.mapper;
 import com.hm.pojo.Emp;
 import tk.mybatis.mapper.common.Mapper;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public interface EmpMapper extends Mapper<Emp> {
 
 //    //傳統寫法
@@ -15,4 +18,9 @@ public interface EmpMapper extends Mapper<Emp> {
 
     //PageHelper
 
+    public List<Emp> list(String name, Short gender, LocalDate begin, LocalDate end);
+
+    public void deleteId(List<Integer> ids);
+
+    public void update(Emp emp);
 }
